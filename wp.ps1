@@ -1,4 +1,4 @@
-param([string]$Url)
+param([string]$Url = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKy_Ya8vfR2Kd6J2fGAf7yDlhK1gtO9hvA2xpGwa4w4Q&s')
 $dest = Join-Path $env:USERPROFILE 'Pictures\wp.jpg'
 Invoke-WebRequest -Uri $Url -OutFile $dest -UseBasicParsing
 Set-ItemProperty -Path 'HKCU:\Control Panel\Desktop' -Name WallpaperStyle -Value '10'
